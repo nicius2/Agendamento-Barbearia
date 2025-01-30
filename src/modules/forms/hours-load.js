@@ -1,5 +1,6 @@
 import dayjs from "dayjs"
 import { openingHous } from "../../utils/openingHours.js"
+import { hoursClick } from "./hours-click.js"
 
 const hours = document.getElementById("hours")
 
@@ -36,6 +37,9 @@ export function hourLoad({ date }) {
 
         hours.append(li)
     })
+
+    // Seleciona somente a hora clicada
+    hoursClick()
 }
 
 // Separando os horarios por periodo
