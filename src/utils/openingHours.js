@@ -1,4 +1,4 @@
-export const openingHours = [
+export const openingHous = [
     "9:00",
     "10:00",
     "11:00",

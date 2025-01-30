@@ -1,48 +1,24 @@
 {
-
   "scripts": {
-
     "build": "webpack",
-
     "server": "json-server --watch server.json --port=3333",
-
     "dev": "webpack server"
-
   },
-
-  "devDependencies": {
-
-    "@babel/core": "^7.26.7",
-
-    "@babel/preset-env": "^7.26.7",
-
-    "babel-loader": "^9.2.1",
-
-    "css-loader": "^6.8.1",
-
-    "dayjs": "^1.11.13",
-
-    "html-webpack-plugin": "^5.6.3",
-
-    "style-loader": "^3.3.3",
-
-    "webpack": "^5.97.1",
-
-    "webpack-cli": "^6.0.1",
-
-    "webpack-dev-server": "^5.2.0",
-
-    "webpack-server": "^0.1.2"
-
-  },
-
   "dependencies": {
-
-    "copy-webpack-plugin": "^11.0.0",
-
+    "dayjs": "^1.11.13",
     "json-server": "^1.0.0-beta.3"
-
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.7",
+    "@babel/preset-env": "^7.26.7",
+    "babel-loader": "^9.2.1",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^6.11.0",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0",
+    "webpack-server": "^0.1.2"
   }
-
 }
-

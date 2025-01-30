@@ -17,16 +17,17 @@ module.exports = {
         static: {
             directory: path.join(__dirname, "dist")
         },
-        port: 3000,
+        port: 3100,
         open: true,
         liveReload: true,
     },
 
     // Configurando o plugin do HTML
     plugins: [new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "index.html"),
-        favicon: path.resolve("src", "assets", "scissors.svg")
+        template: path.resolve(__dirname, "index.html")
     }),
+
+
     // Copiando todos os icones de assets
     new CopyWebpackPlugin({
         patterns: [
@@ -40,14 +41,15 @@ module.exports = {
 
     // Configurando o Css
     module: {
-        rules: [
-            // Importando o css para o webpack
+         rules: [
+            // Importando o Css para o webpack
             {
                 test: /\.css$/,
-                use: ["style-loader", "css-loader"],
+                use: ["style-loader", "css-loader"]
             },
-            // Configurando o bundle
+            // Cnofigurando o burble
             {
+                test: /\.js$/,
                 test: /\.js$/, 
                 use: {
                     loader: "babel-loader",
@@ -56,6 +58,6 @@ module.exports = {
                     }
                 }
             }
-        ]
+         ]
     }
 }

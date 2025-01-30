@@ -68,6 +68,7 @@
   
   .input:focus-within {
     border: 1.5px solid #b8952e;
+    background-color: transparent;
   }
   
   .button {

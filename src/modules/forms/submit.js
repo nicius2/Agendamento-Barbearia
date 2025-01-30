@@ -1,15 +1,19 @@
 import dayjs from "dayjs"
 
-const selectDate = document.getElementById("date")
 const form = document.querySelector("form")
+const selectedDate = document.getElementById("date")
+const selectedName = document.getElementById("client")
 
-const today = dayjs(new Date()).format("YYYY-MM-DD") // Dia atual
+// Date atual para o input
+const today = dayjs(new Date()).format("YYYY-MM-DD")
 
-// Carregar a data atual e bloquear os dias passados
-selectDate.value = today
-selectDate.min = today
+// Carrega a data atual
+selectedDate.value = today
 
-form.onsubmit = (event) => {
-    // Impede o carregamento da pagina
+// Data minima disponivel
+selectedDate.min = today
+
+form.onsubmit = async (event) => {
+    // Previne o comportamento padrão de carregar a página
     event.preventDefault()
-}
+}   
