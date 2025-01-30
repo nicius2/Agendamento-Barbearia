@@ -6,6 +6,7 @@ const selectedDate = document.getElementById("date")
 export function schedulesDay() {
 
     const date = selectedDate.value
-    // Carregamento de horario
+
+    // Carregamento o dia especifico
     hourLoad({ date })
 }
