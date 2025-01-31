@@ -1,5 +1,6 @@
 import { scheduleFetchByDay } from "../../services/schedule-fetch-by-day.js"
 import { hourLoad } from "../forms/hours-load.js"
+import { scheduleShow } from "../schedules/show.js"
 
 
 const selectedDate = document.getElementById("date")
@@ -10,7 +11,9 @@ export async function schedulesDay() {
 
     // Busca na API os agendamentos
     const dailySchedules = await scheduleFetchByDay({ date })
-
+    
+    scheduleShow({ dailySchedules })
+    
 
     // Carregamento o dia especifico
     hourLoad({ date })
