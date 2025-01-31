@@ -12,9 +12,9 @@ export async function schedulesDay() {
     // Busca na API os agendamentos
     const dailySchedules = await scheduleFetchByDay({ date })
     
+    // Exibe os agendamentos
     scheduleShow({ dailySchedules })
     
-
     // Carregamento o dia especifico
-    hourLoad({ date })
+    hourLoad({ date, dailySchedules })
 }
